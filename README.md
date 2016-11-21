@@ -2,4 +2,4 @@
 
 1. run npm install to download dependencies 
 2. run webpack
-3. open indes.html
+3. open index.html
