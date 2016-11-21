@@ -1,1 +1,5 @@
-module.exports = "It works from content.js.";
+//styles
+require('./themes/app.scss');
+
+//scripts
+require('./app.jsx');

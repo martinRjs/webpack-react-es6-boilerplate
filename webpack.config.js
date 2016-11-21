@@ -3,7 +3,7 @@
 var path = require('path');
 
 module.exports = {
-	entry: path.resolve(__dirname, 'src/app.jsx'),
+	entry: path.resolve(__dirname, 'src/main.js'),
 	output: {
 		path: path.resolve(__dirname, 'dist'),
 		filename: 'bundle.js'
@@ -24,9 +24,14 @@ module.exports = {
 			}
 		},{
 			test: /\.jsx$/,
-    		loader: 'babel',
-    		exclude:/node_modules/,
+    	loader: 'babel',
+    	exclude:/node_modules/,
 			include: [__dirname + '/node_modules', __dirname + '/src/'],
+		},{
+			test: /\.scss$/,
+    	loaders: ['style', 'css', 'sass'],
+			include: [__dirname + '/src/themes'],
+    	exclude:/node_modules/,
 		}]
 	}
 }
